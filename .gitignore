@@ -125,6 +125,6 @@ express-app/bin
 react-app/node_modules
 react-app/src/components/DonateForm.js
 react-app/variables.env
-react-app\src\firebase.js
-react-app\src\markers.js
-react-app\package-lock.json
+react-app/src/firebase.js
+react-app/src/markers.js
+react-app/package-lock.json

@@ -1,6 +1,6 @@
 # Planet-First
 
-For live demo, visit - https://planet-earth.vishakavarma.me/
+For live demo, visit - https://planet-first.vishakavarma.me/
 
 News articles source API - https://gnews.io/
  

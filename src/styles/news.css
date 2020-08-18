@@ -1,0 +1,49 @@
+.News{
+    margin-top: 30px;
+}
+
+.news-wrapper{
+    background-color: rgba(255,255,255,0.1);
+    width: 80%;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    float: left;
+    position: relative;
+    /* border: 1px solid white; */
+}
+
+.news-wrapper h2{
+    color: white;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.news-author{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.img-wrapper{
+    width: 48%;
+    float: left;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+img{
+    max-width: 100%;
+}
+
+.news-content{
+   
+    width: 50%;
+    float: left;
+    padding: 2%;
+}

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "../styles/news.css";
+// const news = require('gnews');
+console.log(process.env)
+
 
 class News extends Component {
   constructor(props) {
@@ -15,14 +18,13 @@ class News extends Component {
     //Change it so that it is 7 days in the past.
     let pastDate = ourDate.getDate() - 7;
     ourDate.setDate(pastDate);
-    let formatted_date = ourDate.getFullYear() + "-" + (ourDate.getMonth() + 1) + "-" + ourDate.getDate()
+    let formatted_date = ourDate.getFullYear() + "-" + (ourDate.getMonth()) + "-" + ourDate.getDate()
 
     //Log the date to our web console.
     console.log(ourDate);
-    fetch(
-      'https://newsapi.org/v2/everything?qInTitle=("Climate")&from='+formatted_date+'&sortBy=publishedAt&language=en&apiKey=308dd344ddfb43e6bc1e857546a2c06d'
-    )
-      .then(response => {
+    console.log(process.env.NEWS_API_KEY);
+    fetch('https://gnews.io/api/v3/search?q=climate&mindate'+formatted_date+'&language=en&in=title&image=required&token='+process.env.GNEWS_API_KEY)
+      .then(function (response) {
         return response.json();
       })
       .then(myJson => {
@@ -32,25 +34,26 @@ class News extends Component {
       });
   }
 
-  render() {
+  render() {    
     console.log(this.state);
+    // console.log(this.state.articles[0].title);
     return (
       <div className="News">
-        {this.state.articles.map((item, index) => {
-          if (!(item.urlToImage == null) && !(item.urlToImage === "null")) {
+        {this.state.articles.map((item) => {
+          // if (!(item.image == null) && !(item.image === "null")) {
             return (
               <div className="news-wrapper">
                 <h2>{item.title}</h2>
-                <b className="news-author">{item.author}</b>
+                <b className="news-author">{item.source.name}</b>
                 <div className="img-wrapper">
                   <img
                     className="news-image"
-                    src={item.urlToImage}
+                    src={item.image}
                     alt="Unavailable"
                   />
                 </div>
                 <p className="news-content">
-                  {item.content}
+                  {item.description}
                   <br></br>
                   <a className="news-url" href={item.url}>
                     Read More
@@ -59,12 +62,13 @@ class News extends Component {
                 </p>
               </div>
             );
-          }
-          return <div></div>;
+          // }
+         // return <div>error</div>;
         })}
       </div>
     );
   }
 }
+
 
 export default News;

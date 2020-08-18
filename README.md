@@ -1,6 +1,6 @@
 # Planet-First
 
-For live demo, visit - https://neu-climate-change-app.herokuapp.com/
+For live demo, visit - https://planet-earth.vishakavarma.me/
 
-News articles source API - https://newsapi.org/
+News articles source API - https://gnews.io/
  

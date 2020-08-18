@@ -88,7 +88,6 @@ function Application() {
     },
   ];
 
-
   return (
     <div style={{ width: '70vw', height: '80vh' }}>
     <ReactGlobe

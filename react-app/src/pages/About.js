@@ -42,7 +42,7 @@ const About = () => {
           <br/>
           <br/>
           <br/>
-          *Courtesy: We have taken the articles regarding the climate changes from <a href ="https://newsapi.org/" target="_blank" rel="noopener noreferrer">https://newsapi.org/</a>
+          *Courtesy: We have taken the articles regarding the climate changes from <a href ="https://gnews.io/" target="_blank" rel="noopener noreferrer">https://gnews.io/</a>
         </p>
           </div>
         </div>

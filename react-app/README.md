@@ -8,7 +8,7 @@ This project is based on React JS.
 5) Stripe Payment Gateway
 6) Bootstrap
 
-For live demo, visit - https://planet-earth.vishakavarma.me/
+For live demo, visit - https://planet-first.vishakavarma.me/
 
 News articles source API - https://newsapi.org/ and https://gnews.io/
 
